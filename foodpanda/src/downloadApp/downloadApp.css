@@ -1,0 +1,26 @@
+.downloadApp {
+    width: 100%;
+    background-color: pink;
+    height: 400px;
+}
+
+h2 {
+    font-weight: 100;
+    text-align: center;
+    color: grey;
+    font-size: 5em;
+}
+
+.image {
+    right: 0;
+    width:100px;
+}
+
+a {
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    
+
+}
