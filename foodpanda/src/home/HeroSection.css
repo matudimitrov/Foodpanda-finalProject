@@ -1,0 +1,46 @@
+* {
+    font-family: "MuseoSans",Arial,sans-serif;
+}
+
+.hero-img { 
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    margin-left: 67%;
+    display: block;
+    height: 94%;
+    width: 33%;
+    float: right;
+    background: #fff left top no-repeat;
+    background-size: cover;
+    background-image: url("https://images.deliveryhero.io/image/foodpanda/hero-home-bg.jpg?width=4000&height=2560");
+}
+
+.hero-section .hero-section-content {
+    position: absolute;
+    width: 100%;
+    max-width: 1425px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-section-content {
+    position: relative;
+    top: 64px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-section{
+    top: 64px;
+    height: 488px;
+}
+
+
+.hero-section .hero-section-text {
+    max-width: 70%;
+    padding: 48px 0 48px 0;
+    word-wrap: break-word;
+}
