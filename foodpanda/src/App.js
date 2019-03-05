@@ -4,6 +4,7 @@ import './App.css';
 import Header from './home/Header';
 import HeroSection from './home/HeroSection';
 import DownloadApp from "./downloadApp/downloadApp"
+import Cities from "./cities/cities"
 
 class App extends Component {
 
@@ -19,9 +20,7 @@ class App extends Component {
        <Header />
        <main>
        <HeroSection />
-       <DownloadApp/>
        </main>
-       
       </div>
       
       // <div className="App">
