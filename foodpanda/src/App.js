@@ -19,8 +19,9 @@ class App extends Component {
        <Header />
        <main>
        <HeroSection />
-       </main>
        <DownloadApp/>
+       </main>
+       
       </div>
       
       // <div className="App">
