@@ -1,4 +1,4 @@
-.downloadApp {
+/* .downloadApp {
     width: 100%;
     background-color: pink;
     height: 400px;
@@ -23,4 +23,60 @@ h2 {
     padding: 20px;
     
 
+} */
+
+.downloadApp {
+    width: 100%; 
+    height: auto;
+}
+
+.mainBody {
+    background-color: #d70f64;
+    height: 400px;
+    
+}
+
+.left-row {
+    padding: 50px 0 0 10%;
+}
+
+.h1-download {
+    font-weight: bold;
+    color: rgba(0,0,0,0.1);
+    font-size: 9em;
+    margin: 10% 0 0 10%;
+    transform: translateY(4vh)
+}
+
+h2 {
+    font-weight: 100;
+    position: absolute;
+    margin: 0 0 0 10%;
+    transform: translateY(-4vh)
+}
+
+.image {
+    right: 0;
+    width:100px;
+}
+
+p {
+    color: white;
+    font-size: 1.5em;
+}
+
+.text {
+    font-size: 12pt;
+    width: 40%;
+}
+
+.phones {
+    position: absolute;
+    margin: -600px 0 0 50%;
+}
+
+.downloadApp a {
+    margin: 0 20px 0 0;
+    /* border: 1px solid white; */
+    /* padding: 10px;/ */
 }
