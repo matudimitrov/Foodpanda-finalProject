@@ -1,0 +1,25 @@
+.cities {
+    width: 100%;
+    height: auto;
+
+}
+.h1-cities {
+    font-weight: bold;
+    color: rgba(0,0,0,0.1);
+    font-size: 9em;
+    margin: 10% 0 0 10%;
+    transform: translateY(4vh)
+}
+h2 {
+    font-weight: 100;
+    position: absolute;
+    margin: 0 0 0 10%;
+    transform: translateY(-4vh)
+}
+.cityList {
+    display: flex;
+    flex-direction: row;
+    padding:30px;
+    margin: 30px;
+
+}
