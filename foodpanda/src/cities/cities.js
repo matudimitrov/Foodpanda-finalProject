@@ -1,36 +1,33 @@
 import React, { Component } from 'react';
-import City from "./city"
+import City from "./city";
+import "./cities.css"
 
 
 
 class Cities extends Component {
-    
+
     state = {
         cities: [
-            {name:"Sofia", image: "./images/sofia.jpg", cityLetter:"S"},
-            {name:"Plovdiv", image:"./images/plovdiv.jpg", cityLetter:"P"},
-            {name:"Plovdiv", image:"./images/plovdiv.jpg", cityLetter:"P"},
-            {name:"Varna", image:"./images/varna.jpg", cityLetter:"V"},
-            {name:"Veliko Tarnovo", image:"./images/veliko tarnovo.jpg", cityLetter:"V"}
+            { name: "Sofia", image: "sofia.jpg", cityLetter: "S" },
+            { name: "Plovdiv", image: "plovdiv.jpg", cityLetter: "P" },
+            { name: "Bourgas", image: "burgas.jpg", cityLetter: "B" },
+            { name: "Varna", image: "varna.jpg", cityLetter: "V" },
+            { name: "Veliko Tarnovo", image: "veliko tarnovo.jpg", cityLetter: "V" }
         ]
     }
     render() {
         return (
-         <section class="cities">
-            <h2> Градове 
-                <span> 
-                    Открии ни в твоя град
-                </span>
-            </h2>
-            <div className= "cityList">
-            <ul>
-                {this.state.cities.map(city => (
-                    <City name={city.name} image={city.image} cityLetter={city.cityLetter}/>
-                ))}
-                
-            </ul>
-            </div>
-         </section>
+            <section class="cities">
+                <div>
+                    <h1 class="h1-cities"> Градове </h1>
+                    <h2> Открии ни в твоя град</h2>
+                </div>
+                <div className="cityList">
+                        {this.state.cities.map(city => (
+                            <City name={city.name} image={city.image} cityLetter={city.cityLetter} />
+                        ))}
+                </div>
+            </section>
         );
     }
 }

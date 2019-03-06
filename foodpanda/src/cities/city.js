@@ -1,16 +1,16 @@
 import React, { Component } from "react";
+import ("./city.css")
 
 
 class City extends Component {
     render() {
         return (
-            <li>
-                <figure>
-                    <a class="city" href="/city/ + {City.name}">
-                    <picture>
-                        <div background-image={this.props.image}>
+                <div className="city">
+                    <a href={"/" + this.props.name}>
+                        <div class="city-div" >
+                        <img width="270px" alt="" src={require("../cities/images/" + this.props.image)}></img>
                        </div>
-                    </picture>
+                   
                     <figcapture>
                         <span>
                             {this.props.cityLetter}
@@ -23,8 +23,7 @@ class City extends Component {
                         </span>
                     </figcapture>
                     </a>
-                </figure>
-            </li>
+                </div>
         )
     }
 }

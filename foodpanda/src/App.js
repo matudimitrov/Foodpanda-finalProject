@@ -20,6 +20,7 @@ class App extends Component {
        <Header />
        <main>
        <HeroSection />
+       <Cities/>
        <DownloadApp/>
        </main>
       </div>
