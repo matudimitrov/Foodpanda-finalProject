@@ -39,6 +39,13 @@
     font-weight: 700;
 }
 
+.error {
+    color: red;
+    text-align: center;
+    padding: 10px;
+    visibility: hidden;
+}
+
 .input-box {
     position: relative;
     flex: 1;

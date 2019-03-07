@@ -37,16 +37,19 @@ class LoginForm extends Component {
         event.preventDefault();
         const email = document.querySelector("input[name='email']");
         const password = document.querySelector("input[name='password']");
+        console.log(email)
+        console.log(password)
     
         if(this.state.userList.some(user => 
-            user.email === email && 
-            user.password === password)){
+            user.email === email.value && 
+            user.password === password.value)){
                 console.log('You have logged ');
-                this.props.login();
+                (this.props.login)()
             
         }
         else {
-            throw new Error ('No user found!');
+            const error = document.querySelector('.error');
+            error.style.visibility = "visible";
         }
     
     }
@@ -63,15 +66,17 @@ class LoginForm extends Component {
                         <div className="input-box email">
                             <input type="email" required name="email" placeholder="Email" onChange={this.setEmail} value={this.state.user.email} />
 
-                            <span className="error"></span>
+                           
                         </div>
                         <div className="input-box password">
-                            <input type="password" required placeholder="Password" onChange={this.setPassword} value={this.state.user.password} />
-                            <span className="error"></span>
+                            <input type="password" required name ="password" placeholder="Password" onChange={this.setPassword} value={this.state.user.password} />
+                            
                         </div>
                         <button onClick={this.login}>
                             login
                         </button>
+                        <div className="error"><span >Invalid username or password! </span></div>
+                        
                     </form>
                     <div className="login-form-content">
                         <span>Don't have an account ? </span>

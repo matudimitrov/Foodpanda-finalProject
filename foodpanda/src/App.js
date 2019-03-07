@@ -22,7 +22,7 @@ class App extends Component {
   showLoginForm = event => {
     event.preventDefault();
     console.log("Login");
-    this.state.loginForm = <LoginForm approved={()=>this.login}/>;
+    this.state.loginForm = <LoginForm login={this.login}/>;
     let main = document.querySelector("main");
     main.className += "main";
     this.setState({ isLogging: true });
@@ -34,7 +34,8 @@ class App extends Component {
 
   login = () => {
     console.log('You have logged in!');
-    const loginForm = null;
+    let loginForm = {...this.state.loginForm};
+    loginForm = null;
     this.setState({loginForm})
   }
 
@@ -53,7 +54,7 @@ class App extends Component {
         <main className="main">
 
           <HeroSection />
-
+          <Cities/>
           <DownloadApp />
 
         </main>
