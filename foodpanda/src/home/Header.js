@@ -1,15 +1,26 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from './images/pandaLogo.png';
 import userIcon from './images/user-icon.png';
 import bagIcon from './images/bag-icon.png';
+import './Header.css';
 
 
+class Header extends Component {
+    
 
-class Header extends React.Component {
+    state = {
+        showLoginForm: false,
+    }
 
+    // showLoginForm = event => {
+    //     event.preventDefault();
+    //     this.props.login;
+    //     console.log("login");
 
+    // }
 
     componentDidMount() {
+      
 
         let handleScroll = () => {
 
@@ -18,15 +29,14 @@ class Header extends React.Component {
             if (window.scrollY !== 0) {
                 header.style.backgroundColor = "white";
                 header.style.boxShadow = "0 2px 16px 0 rgba(0,0,0,0.08)";
-                header.style.boxSizing = "border-box";
-                console.log(iconBox);
-                iconBox.style.boxBorder = "1px solid black;";
-                iconBox.style.border = "1px solid black;";
-            
+                iconBox.style.border = "1px solid #ebebeb";
+                iconBox.style.borderRight = "1px solid #ebebeb";
+
             }
             else {
                 header.style.backgroundColor = "transparent";
                 header.style.boxShadow = "none";
+                iconBox.style.border = "none";
             }
 
 
@@ -49,21 +59,25 @@ class Header extends React.Component {
                             </div>
                         </div>
                         <div className="mobile-header">
-                            <p>/Mobile header/</p>
+
                         </div>
                         <div className="tools-wrapper">
-                        <div className="user-wrapper icons"> 
-                                <a className="link" href="">
+
+                            <div className="user-wrapper icons">
+                                <a className="link" href="" onClick={ this.props.login} >
+
                                     <div className="icon-wrapper">
                                         <img className="user-icon " src={userIcon} />
                                     </div>
-                                    <div className="icon-wrapper"> 
+
+                                    <div className="icon-wrapper">
                                         <span className="login"> login </span>
                                     </div>
 
                                 </a>
                             </div>
-                             <div className="bag-wrapper icons">
+
+                            <div className="bag-wrapper icons">
 
                                 <a className="link" href="">
                                     <img className="bag-icon " src={bagIcon} />
@@ -76,7 +90,7 @@ class Header extends React.Component {
                     </header>
 
                 </div>
-
+                
             </React.Fragment>
 
         );

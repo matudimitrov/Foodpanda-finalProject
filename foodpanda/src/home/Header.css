@@ -94,8 +94,24 @@ header {
 
 .icons:hover{
     background-color: pink; 
-    font-color: white;
+    color: white;   
 }
+
+.icons:hover{
+    background-blend-mode: screen;
+    color: white;   
+}
+
+.link::before{
+    content: '';
+    width: 1px;
+    background: #ebebeb;
+    height: 37.5%;
+    position: absolute;
+    left: 0;
+    top: 31.25%;
+}
+
 
 .icon-wrapper{
     width: 49%;
@@ -103,3 +119,8 @@ header {
     justify-content: center;
 }
 
+hr {
+    width: 0.5px;
+    height: 20px;
+    display: inline-block;
+}
