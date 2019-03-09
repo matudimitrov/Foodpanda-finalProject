@@ -42,12 +42,26 @@ class Header extends Component {
 
         };
 
+
         window.addEventListener('scroll', handleScroll);
 
+
+        
+
+
+    }
+     showInfo = event => {
+        event.preventDefault();
+        console.log('Info');
     }
 
     render() {
-
+        let currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+        let login = <span className="login"> login </span>
+        if(currentUser) { 
+            login =  <span className="login"> {currentUser.firstName} </span>
+        }
+       
         return (
             <React.Fragment>
 
@@ -64,14 +78,14 @@ class Header extends Component {
                         <div className="tools-wrapper">
 
                             <div className="user-wrapper icons">
-                                <a className="link" href="" onClick={ this.props.login} >
+                                <a className="link" href="" onClick={ (currentUser ? this.showInfo:this.props.login)} >
 
                                     <div className="icon-wrapper">
                                         <img className="user-icon " src={userIcon} />
                                     </div>
 
                                     <div className="icon-wrapper">
-                                        <span className="login"> login </span>
+                                        {login}
                                     </div>
 
                                 </a>
