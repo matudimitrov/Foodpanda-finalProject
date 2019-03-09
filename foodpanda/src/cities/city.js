@@ -8,20 +8,12 @@ class City extends Component {
                 <div className="city">
                     <a href={"/" + this.props.name}>
                         <div class="city-div" >
-                        <img width="270px" alt="" src={require("../cities/images/" + this.props.image)}></img>
+                        <img class="city-pic" alt="" src={require("../cities/images/" + this.props.image)}></img>
+                        <div class="city-name">{this.props.name}</div>
                        </div>
-                   
-                    <figcapture>
                         <span>
                             {this.props.cityLetter}
                         </span>
-                        <span>
-                            {this.props.name}
-                        </span>
-                        <span>
-
-                        </span>
-                    </figcapture>
                     </a>
                 </div>
         )

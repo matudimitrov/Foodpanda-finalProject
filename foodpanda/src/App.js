@@ -7,6 +7,13 @@ import DownloadApp from "./downloadApp/downloadApp";
 import Cities from "./cities/cities";
 import LoginForm from "./home/login/loginForm";
 
+// import Sofia from "./cities/Sofia";
+import HomePage from "./home/HomePage";
+
+import Restaurant from "./restaurant/restaurant"
+
+import { Route,  BrowserRouter} from "react-router-dom";
+import Switch from 'react-router-dom/Switch';
 
 class App extends Component {
 
@@ -53,11 +60,25 @@ class App extends Component {
 
         <main className="main">
 
-          <HeroSection />
+          {/* <HeroSection />
           <Cities/>
-          <DownloadApp />
+          <DownloadApp /> */}
+
 
         </main>
+        <Restaurant/>
+       {/* <Header />
+       <main>
+        <BrowserRouter>
+        <Switch>
+       {/* <HeroSection />
+       <Cities/>
+       <DownloadApp/> */}
+       {/* <Route exact path="/" component={HomePage}/> */}
+       {/* <Route exact path="/Sofia" component ={Sofia}/> */}
+       {/* </Switch>
+       </BrowserRouter>
+       </main> */} 
 
       </div>
 
