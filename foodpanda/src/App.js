@@ -9,6 +9,13 @@ import LoginForm from "./home/login/loginForm";
 import RegisterForm from "./home/login/registration";
 import { networkInterfaces } from 'os';
 
+// import Sofia from "./cities/Sofia";
+import HomePage from "./home/HomePage";
+
+import Restaurant from "./restaurant/restaurant"
+
+import { Route,  BrowserRouter} from "react-router-dom";
+import Switch from 'react-router-dom/Switch';
 
 class App extends Component {
 
@@ -80,8 +87,25 @@ class App extends Component {
           <HeroSection />
           <Cities />
           <DownloadApp />
+          {/* <HeroSection />
+          <Cities/>
+          <DownloadApp /> */}
+
 
         </main>
+        <Restaurant/>
+       {/* <Header />
+       <main>
+        <BrowserRouter>
+        <Switch>
+       {/* <HeroSection />
+       <Cities/>
+       <DownloadApp/> */}
+       {/* <Route exact path="/" component={HomePage}/> */}
+       {/* <Route exact path="/Sofia" component ={Sofia}/> */}
+       {/* </Switch>
+       </BrowserRouter>
+       </main> */} 
 
       </div>
 

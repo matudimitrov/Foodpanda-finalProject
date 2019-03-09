@@ -19,6 +19,7 @@ h2 {
 .cityList {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     padding:30px;
     margin: 30px;
 
