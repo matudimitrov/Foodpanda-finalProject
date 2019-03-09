@@ -22,27 +22,40 @@ class Header extends Component {
     componentDidMount() {
       
 
-        let handleScroll = () => {
+        // let handleScroll = () => {
 
-            const header = document.querySelector('header');
-            const iconBox = document.querySelector('.icons');
+        //     const header = document.querySelector('header');
+        //     const iconBox = document.querySelector('.icons');
+        //     if (window.scrollY !== 0) {
+        //         header.style.backgroundColor = "white";
+        //         header.style.boxShadow = "0 2px 16px 0 rgba(0,0,0,0.08)";
+        //         iconBox.style.border = "1px solid #ebebeb";
+        //         iconBox.style.borderRight = "1px solid #ebebeb";
+
+        //     }
+        //     else {
+        //         header.style.backgroundColor = "transparent";
+        //         header.style.boxShadow = "none";
+        //         iconBox.style.border = "none";
+        //     }
+
+
+        // };
+
+        // window.addEventListener('scroll', handleScroll);
+        let handleScroll = () => {
+            const header = document.querySelector('.navbar');
             if (window.scrollY !== 0) {
                 header.style.backgroundColor = "white";
                 header.style.boxShadow = "0 2px 16px 0 rgba(0,0,0,0.08)";
-                iconBox.style.border = "1px solid #ebebeb";
-                iconBox.style.borderRight = "1px solid #ebebeb";
+                header.style.boxSizing = "border-box";
 
             }
             else {
                 header.style.backgroundColor = "transparent";
                 header.style.boxShadow = "none";
-                iconBox.style.border = "none";
             }
-
-
         };
-
-
         window.addEventListener('scroll', handleScroll);
 
 
@@ -63,51 +76,68 @@ class Header extends Component {
         }
        
         return (
-            <React.Fragment>
+        //     <React.Fragment>
 
-                <div className="top-section">
-                    <header className="header" >
-                        <div className="logo-wrapper">
-                            <div className="logo">
-                                <a href="#"> <img className="panda-logo" src={logo} alt="" /> </a>
-                            </div>
-                        </div>
-                        <div className="mobile-header">
+        //         <div className="top-section">
+        //             <header className="header" >
+        //                 <div className="logo-wrapper">
+        //                     <div className="logo">
+        //                         <a href="#"> <img className="panda-logo" src={logo} alt="" /> </a>
+        //                     </div>
+        //                 </div>
+        //                 <div className="mobile-header">
 
-                        </div>
-                        <div className="tools-wrapper">
+        //                 </div>
+        //                 <div className="tools-wrapper">
 
-                            <div className="user-wrapper icons">
-                                <a className="link" href="" onClick={ (currentUser ? this.showInfo:this.props.login)} >
+        //                     <div className="user-wrapper icons">
+        //                         <a className="link" href="" onClick={ this.props.login} >
 
-                                    <div className="icon-wrapper">
-                                        <img className="user-icon " src={userIcon} />
-                                    </div>
+        //                             <div className="icon-wrapper">
+        //                                 <img className="user-icon " src={userIcon} />
+        //                             </div>
 
-                                    <div className="icon-wrapper">
-                                        {login}
-                                    </div>
+        //                             <div className="icon-wrapper">
+        //                                 <span className="login"> login </span>
+        //                             </div>
 
-                                </a>
-                            </div>
+        //                         </a>
+        //                     </div>
 
-                            <div className="bag-wrapper icons">
+        //                     <div className="bag-wrapper icons">
 
-                                <a className="link" href="">
-                                    <img className="bag-icon " src={bagIcon} />
+        //                         <a className="link" href="">
+        //                             <img className="bag-icon " src={bagIcon} />
 
-                                </a>
+        //                         </a>
 
-                            </div>
+        //                     </div>
 
-                        </div>
-                    </header>
+        //                 </div>
+        //             </header>
 
-                </div>
+        //         </div>
                 
-            </React.Fragment>
+        //     </React.Fragment>
 
-        );
+        // );
+        <div>
+        <nav className="navbar fixed-top navbar-light">
+            <a className="navbar-brand" href="#">
+                <img src={logo} className="d-inline-block align-top" width={150} alt=""/>
+            </a>
+            <div className="icons"> 
+                <a className="mr-3 icon" href="#">
+                    <img src={userIcon} width={30}/>
+                     ВЛЕЗ
+                </a>
+                <a className="icon" href="#">
+                    <img src={bagIcon} width={40}/>
+                </a>
+            </div>
+        </nav>
+    </div>
+)
     }
 }
 
