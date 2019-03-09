@@ -6,6 +6,8 @@ import HeroSection from './home/HeroSection';
 import DownloadApp from "./downloadApp/downloadApp";
 import Cities from "./cities/cities";
 import LoginForm from "./home/login/loginForm";
+import RegisterForm from "./home/login/registration";
+import { networkInterfaces } from 'os';
 
 // import Sofia from "./cities/Sofia";
 import HomePage from "./home/HomePage";
@@ -19,33 +21,55 @@ class App extends Component {
 
   state = {
     isLogging: false,
-    loginForm: null,
+    form: null,
     loggedUser: {
       email: null,
       password: null,
-    }
-  }
+    },
+    userList: [
 
+    ]
+  }
+  
   showLoginForm = event => {
+    if(event){
     event.preventDefault();
+    }
     console.log("Login");
-    this.state.loginForm = <LoginForm login={this.login}/>;
+    this.setState({ form: <div className="page-mask"> <LoginForm login={this.login} register={this.showRegisterForm} close={this.close}/> </div> });
     let main = document.querySelector("main");
     main.className += "main";
     this.setState({ isLogging: true });
-
-    console.log(main)
-
-
   }
 
   login = () => {
     console.log('You have logged in!');
-    let loginForm = {...this.state.loginForm};
-    loginForm = null;
-    this.setState({loginForm})
+    let form = { ...this.state.form };
+    form = null;
+    this.setState({ form })
   }
 
+ 
+  showRegisterForm = () => {
+    let form = {...this.state.form};
+    form = <div className="page-mask"> <RegisterForm login={this.showLoginForm} close={this.close} register={this.register}/> </div>
+    this.setState({form});
+  }
+
+  register = () => {
+    console.log('adding new user')
+    const newUser = JSON.parse(sessionStorage.getItem('usersList'));
+    const userList = [...this.state.userList];
+    userList.push(newUser[0]);
+    this.setState({userList});
+    localStorage.setItem('userList', JSON.stringify(userList));
+    this.close();
+  }
+
+  close = () => {
+    console.log('Close');
+    this.setState({form: null});
+  }
 
   render() {
 
@@ -56,7 +80,7 @@ class App extends Component {
 
         <Header login={this.showLoginForm} />
 
-        {this.state.loginForm}
+        {this.state.form}
 
         <main className="main">
 

@@ -16,6 +16,19 @@
     width: 100%;
 }
 
+.form-close {
+    background-image: url(../images/close.png);
+    background-size: cover;
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 31px;
+    height: 31px;
+}
+
+
+
 .login-form-content{
     width: 100%;
     padding: 13px 24px; 
@@ -23,8 +36,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-   
-    
+}
+
+.register-link {
+    color: #D70F64;
 }
 
 .login-header{

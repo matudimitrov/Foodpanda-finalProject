@@ -58,10 +58,23 @@ class Header extends Component {
         };
         window.addEventListener('scroll', handleScroll);
 
+
+        
+
+
+    }
+     showInfo = event => {
+        event.preventDefault();
+        console.log('Info');
     }
 
     render() {
-
+        let currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+        let login = <span className="login"> login </span>
+        if(currentUser) { 
+            login =  <span className="login"> {currentUser.firstName} </span>
+        }
+       
         return (
         //     <React.Fragment>
 
