@@ -1,16 +1,16 @@
-/* header {
+header {
     height: 64px;
     box-shadow: none;
     display: flex;
     align-items: stretch;
     position: relative;
     z-index: 0;
-} */
+}
 .icon {
     color: #d70f64;
     font-size: 11pt;
 }
-/* 
+
 .top-section {
     top: 0;
     z-index: 1200;
@@ -75,13 +75,13 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-} */
+}
 
 .icon:hover {
     color: #d70f64;
     text-decoration: none;
 }
-/* .user-icon  {
+.user-icon  {
    height: 25px;
    margin: 0 15px;
 }
@@ -125,7 +125,7 @@
     width: 49%;
     display: flex;
     justify-content: center;
-} */
+}
 
 hr {
     width: 0.5px;

@@ -10,7 +10,7 @@ class HeroSection extends React.Component {
 
                 <div className="hero-img"></div>
                 <div className="hero-section-content">
-                    <div className="hero-section-text"> <h1>It's the food you love, delivered</h1>
+                    <div className="hero-section-text"> <h1>Поръчай храната, която обичаш</h1>
                         <p></p>
                     </div>
                 </div>
