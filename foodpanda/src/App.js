@@ -14,8 +14,8 @@ import HomePage from "./home/HomePage";
 
 import Restaurant from "./restaurant/restaurant"
 
-import { Route,  BrowserRouter} from "react-router-dom";
-import Switch from 'react-router-dom/Switch';
+// import { Route,  BrowserRouter} from "react-router-dom";
+//import Switch from 'react-router-dom/Switch';
 
 class App extends Component {
 
