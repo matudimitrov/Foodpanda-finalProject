@@ -18,8 +18,8 @@ class RegisterForm extends Component {
     }
 
     showLoginForm = event => {
-        event.preventDefault();
-        (this.props.login)();
+        event.preventDefault()
+        (this.props.login)()
     }
 
     setFirstName = event => {

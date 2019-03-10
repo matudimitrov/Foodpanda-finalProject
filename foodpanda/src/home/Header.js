@@ -6,12 +6,15 @@ import './Header.css';
 
 
 class Header extends Component {
+    constructor (props){
+        super(props);
+        state = {
+            showLoginForm: false,
+        }
     
-
-    state = {
-        showLoginForm: false,
     }
 
+    
     // showLoginForm = event => {
     //     event.preventDefault();
     //     this.props.login;
