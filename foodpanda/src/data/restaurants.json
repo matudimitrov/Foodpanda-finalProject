@@ -1,0 +1,17 @@
+{
+    "Sofia": [
+        {"id": 1,"name": "Турски ресторант Сарай", "price": "$$", "rating": 4, "image": "https://images.deliveryhero.io/image/fd-bg/LH/v0vl-listing.jpg?width=400&height=292"},
+        {"id": 2,"name": "Salt & Pepper", "price": "$$", "rating": 4.8, "image": "https://images.deliveryhero.io/image/fd-bg/LH/v5qz-listing.jpg?width=400&height=292"},
+        {"id": 3,"name": "Starbucks", "price": "$", "rating": 4.8, "image": "https://images.deliveryhero.io/image/fd-bg/LH/v4ex-listing.jpg?width=400&height=292"}
+    ],
+    "Plovdiv": [
+        {"id": 1,"name": "Starbucks", "price": "$", "rating": 4.8},
+        {"id": 2,"name": "Ресторант Victoria", "price": "$", "rating": 4.3},
+        {"id": 3,"name": "My Place Burger", "price": "$$", "rating": 4.8}
+    ],
+    "Varna": [
+        {"id": 1,"name": "Starbucks", "price": "$", "rating": 4.8},
+        {"id": 2,"name": "Love Pizza", "price": "$", "rating": 5},
+        {"id": 3,"name": "Sandwich point", "price": "$", "rating": 4.5}
+    ]
+}

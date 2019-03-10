@@ -83,10 +83,10 @@ class App extends Component {
         {this.state.form}
 
         <main className="main">
-
-          <HeroSection />
-          <Cities/>
-          <DownloadApp />
+        <HeroSection/>
+        <Cities/>
+        <DownloadApp/>
+       {/* <Restaurant/> */}
 
 
         </main>
