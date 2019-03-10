@@ -1,63 +1,14 @@
-* {box-sizing: border-box;}
+.restaurant {
+    width:75%;
+    height: auto;
 
-.container {
-    position: relative;
-    width: 75%;
-    heigth: auto;
-
-  }
-
-img {
-  display: block;
-  width: 100%;
-  height: 400px;
 }
-button {
-    margin-left:15px;
-}
-.overlay {
-    position: absolute; 
-    bottom: 0; 
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
-    color: #f1f1f1; 
-    width: 100%;
-    transition: .5s ease;
-    opacity:1;
-    color: white;
-    font-size: 20px;
-    padding: 20px;
-    text-align: center;
-  }
 
 .cart {
     width:25%;
 
 }
-.restaurant-name {
-    justify-content: center;
-    font-weight: bold;
-    font-size: 2em;
-
+h1{ 
+    right:0;
+    
 }
-
-.info {
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    border: 2px solid lightgrey;
-    width: 75%;
-
-}
-ul li{
-    display: table-cell;
-
-  }
-  .menu {
-      display: flex;
-      flex-direction: row;
-      border: 2px solid lightgrey;
-      height: auto;
-      width: 75%;
-      justify-content: flex-start;
-  }
