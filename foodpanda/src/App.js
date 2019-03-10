@@ -84,9 +84,7 @@ class App extends Component {
 
         <main className="main">
 
-          <HeroSection />
-          <Cities/>
-          <DownloadApp />
+       <Restaurant/>
 
 
         </main>
