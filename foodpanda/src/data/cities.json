@@ -1,0 +1,9 @@
+{
+    "cities" : [
+        {"id": 1, "name" : "Sofia", "img": "./images/sofia.jpg"},
+        {"id": 2, "name" : "Plovdiv", "img": "./images/plovdiv.jpg"},
+        {"id": 3, "name" : "Varna", "img": "./images/varna.jpg"},
+        {"id": 4, "name" : "Veliko Tarnovo", "img" :"./images/veliko tarnovo.jpg"},
+        {"id": 5, "name" : "Bourgas", "img": "./images/burgas.jpg"}
+    ]
+}
