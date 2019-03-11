@@ -23,7 +23,7 @@ class Restaurant extends Component {
         return (
             <div className="restaurant">
                 <section>
-                    <div  className="restaurant-image">
+                    <div  className="restaurant-imagee">
                     <img alt="" src="https://cdn10.bigcommerce.com/s-ibjgubc/products/80/images/266/long_lake_pizza__03240.1424065993.1280.1280.jpg?c=2"></img>
                     </div>
                     <h1>Pizza Verruci</h1>

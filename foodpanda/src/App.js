@@ -9,13 +9,13 @@ import LoginForm from "./home/login/loginForm";
 import RegisterForm from "./home/login/registration";
 import { networkInterfaces } from 'os';
 import UpperSectionForCity from "./cityRestaurants/UpperSectionForCity"
-import Sofia from  "./cityRestaurants/Sofia"
+import Sofia from "./cityRestaurants/Sofia"
 import HomePage from "./home/HomePage";
 
 
 import Restaurant from "./restaurants/restaurant"
 
-import { Route,  BrowserRouter} from "react-router-dom";
+import { Route, BrowserRouter } from "react-router-dom";
 import Switch from 'react-router-dom/Switch';
 
 class App extends Component {
@@ -31,13 +31,13 @@ class App extends Component {
 
     ]
   }
-  
+
   showLoginForm = event => {
-    if(event){
-    event.preventDefault();
+    if (event) {
+      event.preventDefault();
     }
     console.log("Login");
-    this.setState({ form: <div className="page-mask"> <LoginForm login={this.login} register={this.showRegisterForm} close={this.close}/> </div> });
+    this.setState({ form: <div className="page-mask"> <LoginForm login={this.login} register={this.showRegisterForm} close={this.close} /> </div> });
     let main = document.querySelector("main");
     main.className += "main";
     this.setState({ isLogging: true });
@@ -50,11 +50,11 @@ class App extends Component {
     this.setState({ form })
   }
 
- 
+
   showRegisterForm = () => {
-    let form = {...this.state.form};
-    form = <div className="page-mask"> <RegisterForm login={this.showLoginForm} close={this.close} register={this.register}/> </div>
-    this.setState({form});
+    let form = { ...this.state.form };
+    form = <div className="page-mask"> <RegisterForm login={this.showLoginForm} close={this.close} register={this.register} /> </div>
+    this.setState({ form });
   }
 
   register = () => {
@@ -62,14 +62,14 @@ class App extends Component {
     const newUser = JSON.parse(sessionStorage.getItem('usersList'));
     const userList = [...this.state.userList];
     userList.push(newUser[0]);
-    this.setState({userList});
+    this.setState({ userList });
     localStorage.setItem('userList', JSON.stringify(userList));
     this.close();
   }
 
   close = () => {
     console.log('Close');
-    this.setState({form: null});
+    this.setState({ form: null });
   }
 
   componentDidMount() {
@@ -78,15 +78,15 @@ class App extends Component {
     let finoSides = menu.categorys[1]["menu-items"];
     let chickenMeals = menu.categorys[2]["menu-items"];
     let sharingPlatters = menu.categorys[3]["menu-items"];
-    let desserts =  menu.categorys[4]["menu-items"];
+    let desserts = menu.categorys[4]["menu-items"];
     let sides = menu.categorys[5]["menu-items"];
     let salads = menu.categorys[6]["menu-items"];
     let newOffering = menu.categorys[7]["menu-items"];
     let burgers = menu.categorys[8]["menu-items"];
     menu = [appetizers, finoSides, chickenMeals, sharingPlatters, desserts, sides, salads, newOffering, burgers];
-    this.setState({menu});
-    
-}
+    this.setState({ menu });
+
+  }
 
   render() {
 
@@ -101,24 +101,24 @@ class App extends Component {
 
         <main className="main">
 
-          < UpperSectionForCity/>
-          <Sofia/>
+          < UpperSectionForCity />
+          <Sofia />
           <DownloadApp />
 
-<Restaurant />
+          <Restaurant />
         </main>
-       {/* <Header />
+        {/* <Header />
        <main>
         <BrowserRouter>
         <Switch>
        {/* <HeroSection />
        <Cities/>
        <DownloadApp/> */}
-       {/* <Route exact path="/" component={HomePage}/> */}
-       {/* <Route exact path="/Sofia" component ={Sofia}/> */}
-       {/* </Switch>
+        {/* <Route exact path="/" component={HomePage}/> */}
+        {/* <Route exact path="/Sofia" component ={Sofia}/> */}
+        {/* </Switch>
        </BrowserRouter>
-       </main> */} 
+       </main> */}
 
       </div>
 
