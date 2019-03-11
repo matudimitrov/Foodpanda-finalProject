@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 import './home/Header.css';
 import './App.css';
 import Header from './home/Header';
-import HeroSection from './home/HeroSection';
-import DownloadApp from "./downloadApp/downloadApp";
-import Cities from "./cities/cities";
+// import HeroSection from './home/HeroSection';
+// import DownloadApp from "./downloadApp/downloadApp";
+// import Cities from "./cities/cities";
 import LoginForm from "./home/login/loginForm";
 import RegisterForm from "./home/login/registration";
-import Sofia from  "./cityRestaurants/Sofia/Sofia"
-import Plovdiv from  "./cityRestaurants/Plovdiv/Plovdiv"
-import Bourgas from  "./cityRestaurants/Bourgas/Bourgas"
-import Varna from  "./cityRestaurants/Varna/Varna"
-import VelikoTarnovo from  "./cityRestaurants/Veliko Tarnovo/VelikoTarnovo"
+import Sofia from  "./cityRestaurants/Sofia/Sofia";
+import Plovdiv from  "./cityRestaurants/Plovdiv/Plovdiv";
+import Bourgas from  "./cityRestaurants/Bourgas/Bourgas";
+import Varna from  "./cityRestaurants/Varna/Varna";
+import VelikoTarnovo from  "./cityRestaurants/Veliko Tarnovo/VelikoTarnovo";
 import HomePage from "./home/HomePage";
+import NoPage from "./home/NoPage";
 
 import { Route,  BrowserRouter, Switch} from "react-router-dom";
 //import Switch from 'react-router-dom/Switch';
@@ -91,6 +92,7 @@ class App extends Component {
        <Route exact path="/Varna" component ={Varna}/>
        <Route exact path="/Bourgas" component ={Bourgas}/>
        <Route exact path="/Veliko Tarnovo" component ={VelikoTarnovo}/>
+       <Route component={NoPage}/>
         </Switch>
        </BrowserRouter>
 

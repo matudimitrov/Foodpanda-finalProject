@@ -69,7 +69,7 @@ class Header extends Component {
                     <header className="header" >
                         <div className="logo-wrapper">
                             <div className="logo">
-                                <a href="#"> <img className="panda-logo" src={logo} alt="" /> </a>
+                                <a href="/"> <img className="panda-logo" src={logo} alt="" /> </a>
                             </div>
                         </div>
                         <div className="mobile-header">
