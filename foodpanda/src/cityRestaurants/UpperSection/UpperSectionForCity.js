@@ -1,5 +1,5 @@
 import React from 'react';
-import './UpperSectionForCity.css';
+import '../UpperSection/UpperSectionForCity.css';
 
 class HeroSection extends React.Component {
 
@@ -10,7 +10,7 @@ class HeroSection extends React.Component {
 
                 <div className="hero-img"></div>
                 <div className="hero-section-content">
-                    <div className="hero-section-text"> <h1>Доставка на храна от най-добрите ресторанти в </h1>
+                    <div className="hero-section-text"> <h1>Доставка на храна от най-добрите ресторанти в </h1> <label className="city">{this.props.name}</label>
                         <p></p>
                     </div>
                 </div>

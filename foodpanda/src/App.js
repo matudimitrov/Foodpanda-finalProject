@@ -8,8 +8,12 @@ import Cities from "./cities/cities";
 import LoginForm from "./home/login/loginForm";
 import RegisterForm from "./home/login/registration";
 import { networkInterfaces } from 'os';
-import UpperSectionForCity from "./cityRestaurants/UpperSectionForCity"
-import Sofia from  "./cityRestaurants/Sofia"
+import UpperSectionForCity from "./cityRestaurants/UpperSection/UpperSectionForCity"
+import Sofia from  "./cityRestaurants/Sofia/Sofia"
+import Plovdiv from  "./cityRestaurants/Plovdiv/Plovdiv"
+import Bourgas from  "./cityRestaurants/Bourgas/Bourgas"
+import Varna from  "./cityRestaurants/Varna/Varna"
+import VelikoTarnovo from  "./cityRestaurants/Veliko Tarnovo/VelikoTarnovo"
 import HomePage from "./home/HomePage";
 
 
@@ -84,10 +88,10 @@ class App extends Component {
         {this.state.form}
 
         <main className="main">
-
-          < UpperSectionForCity/>
-          <Sofia/>
-          <DownloadApp />
+          {/* <Sofia/> */}
+          {/* <Plovdiv/> */}
+          {/* <Bourgas/> */}
+          <VelikoTarnovo/>
 
 
         </main>
