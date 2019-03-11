@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import City from "./city";
-import "./cities.css"
+import "./cities.css";
+import HeroSection from "../home/HeroSection";
+import DownloadApp from "../downloadApp/downloadApp";
+
 
 
 
@@ -17,6 +20,8 @@ class Cities extends Component {
     }
     render() {
         return (
+            <React.Fragment>
+                <HeroSection/>
             <section class="cities">
                 <div>
                     <h1 class="h1-cities"> Градове </h1>
@@ -28,6 +33,8 @@ class Cities extends Component {
                         ))}
                 </div>
             </section>
+            <DownloadApp/>
+            </React.Fragment>
         );
     }
 }

@@ -1,20 +1,69 @@
-.restaurant {
+.restaurant-wrapper {
     width:77%;
-    height: auto;
+   
 
 }
 
-.restaurant-imagee {
-    height: 290px;
-    background-image: url(https://images.deliveryhero.io/image/fd-bg/LH/v7oz-listing.jpg?width=400&amp;height=292);
 
+.restaurant-image {
+    width: 100%;
+    height: 290px;
+    background-image: url("https://images.deliveryhero.io/image/fd-bg/LH/v7oz-listing.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.cat:hover {
+    border-bottom: 1px solid #d70f64;
+    cursor: pointer
+}
+
+.dish-list {
+    width: 100%;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ebebeb;
+    background: #fff;
 }
 
 .cart {
-    width:25%;
+    width:350px;
 
 }
-h1{ 
-    right:0;
-    
+ .rating {
+     margin: 10px;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: flex-start;
+ }
+
+.rating span { 
+    margin-left: 10px;
+    font-size: 0.8em;
+    margin-top: 20px;
+}
+
+.categories{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.categories li{
+    display: inline;
+}
+
+.nav-menu {
+    height: 64px;
+    padding-left: 10px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);
+    background-color: white;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    z-index: 0;
+}
+
+.menu-content{
+    margin-top: 10px;
 }

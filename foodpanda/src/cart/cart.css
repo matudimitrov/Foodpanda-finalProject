@@ -1,14 +1,49 @@
 .cart-wrapper {background-color: #fff;
     position: fixed;
+    z-index: 1300;;
     right: 0;
     top: 0;
-    width: 23%;
+    width: 350px;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     box-shadow: 0 2px 28px 0 rgba(0,0,0,0);
+    border: 1px solid #ebebeb;
     background-color: 0 2px 28px 0 rgba(0,0,0,0);
 
 }
 
 .cart-header {
     padding-top: 100px;
+    text-align: center;
+}
+
+.ordered-meals {
+    padding: 10px;
+    text-align: center;
+}
+
+.calculator {
+    margin: auto;
+    width: 90%;
+    border-top: 1px solid #ebebeb;
+}
+
+.fee{
+    
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-btn {
+    background-color: #d70f64;
+    color: white;
+    height: 49px;
+    width: 300px;
+    margin: auto;
+   border: 1px solid #ebebeb;
+    text-align: center;
+    font-size: 1.5em;
 }

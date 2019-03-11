@@ -2,21 +2,23 @@ import React, { Component } from 'react';
 import './home/Header.css';
 import './App.css';
 import Header from './home/Header';
-import HeroSection from './home/HeroSection';
-import DownloadApp from "./downloadApp/downloadApp";
-import Cities from "./cities/cities";
+// import HeroSection from './home/HeroSection';
+// import DownloadApp from "./downloadApp/downloadApp";
+// import Cities from "./cities/cities";
 import LoginForm from "./home/login/loginForm";
 import RegisterForm from "./home/login/registration";
-import { networkInterfaces } from 'os';
-import UpperSectionForCity from "./cityRestaurants/UpperSectionForCity"
-import Sofia from "./cityRestaurants/Sofia"
+import Sofia from  "./cityRestaurants/Sofia/Sofia";
+import Plovdiv from  "./cityRestaurants/Plovdiv/Plovdiv";
+import Bourgas from  "./cityRestaurants/Bourgas/Bourgas";
+import Varna from  "./cityRestaurants/Varna/Varna";
+import VelikoTarnovo from  "./cityRestaurants/Veliko Tarnovo/VelikoTarnovo";
 import HomePage from "./home/HomePage";
+import NoPage from "./home/NoPage";
+import Footer from "./home/footer/footer"
 
-
-import Restaurant from "./restaurants/restaurant"
-
-import { Route, BrowserRouter } from "react-router-dom";
-import Switch from 'react-router-dom/Switch';
+import { Route,  BrowserRouter, Switch} from "react-router-dom";
+import Restaurant from './restaurants/restaurant';
+//import Switch from 'react-router-dom/Switch';
 
 class App extends Component {
 
@@ -83,8 +85,11 @@ class App extends Component {
     let salads = menu.categorys[6]["menu-items"];
     let newOffering = menu.categorys[7]["menu-items"];
     let burgers = menu.categorys[8]["menu-items"];
-    menu = [appetizers, finoSides, chickenMeals, sharingPlatters, desserts, sides, salads, newOffering, burgers];
-    this.setState({ menu });
+    const menu1 = [appetizers, finoSides, chickenMeals];
+    const menu2 = [sharingPlatters, desserts, sides];
+    const menu3 = [salads, newOffering, burgers];
+    this.setState({ menu1, menu2, menu3 });
+
 
   }
 
@@ -94,32 +99,63 @@ class App extends Component {
 
 
       <div className="App">
-
+        <React.Fragment>
         <Header login={this.showLoginForm} />
 
         {this.state.form}
 
         <main className="main">
 
-          < UpperSectionForCity />
-          <Sofia />
-          <DownloadApp />
+      {/* <Restaurant /> */}
 
-          <Restaurant />
-        </main>
-        {/* <Header />
-       <main>
-        <BrowserRouter>
+          <BrowserRouter>
         <Switch>
-       {/* <HeroSection />
-       <Cities/>
-       <DownloadApp/> */}
-        {/* <Route exact path="/" component={HomePage}/> */}
-        {/* <Route exact path="/Sofia" component ={Sofia}/> */}
-        {/* </Switch>
-       </BrowserRouter>
-       </main> */}
+        <Route exact path="/" component={HomePage}/> 
+       <Route exact path="/Sofia" component ={Sofia}/>
+       <Route exact path="/Plovdiv" component ={Plovdiv}/>
+       <Route exact path="/Varna" component ={Varna}/>
+       <Route exact path="/Bourgas" component ={Bourgas}/>
+       <Route exact path="/Veliko Tarnovo" component ={VelikoTarnovo}/>
+       <Route exact path="/Sofia/1" render = {() => <Restaurant menu={this.state.menu1} />}/>
+       <Route exact path="/Sofia/2" render = {() => <Restaurant menu={this.state.menu2} />}/>
+       <Route exact path="/Sofia/3" render = {() => <Restaurant menu={this.state.menu3} />}/>
+       <Route exact path="/Sofia/4" render = {() => <Restaurant menu={this.state.menu1} />}/>
+       <Route exact path="/Sofia/5" render = {() => <Restaurant menu={this.state.menu2} />}/>
 
+       <Route exact path="/Plovdiv/1" render = {() => <Restaurant menu={this.state.menu1} />}/>
+       <Route exact path="/Plovdiv/2" render = {() => <Restaurant menu={this.state.menu2} />}/>
+       <Route exact path="/Plovdiv/3" render = {() => <Restaurant menu={this.state.menu3} />}/>
+       <Route exact path="/Plovdiv/4" render = {() => <Restaurant menu={this.state.menu1} />}/>
+       <Route exact path="/Plovdiv/5" render = {() => <Restaurant menu={this.state.menu2} />}/>
+
+       <Route exact path="/Varna/1" render = {() => <Restaurant menu={this.state.menu1} />}/>
+       <Route exact path="/Varna/2" render = {() => <Restaurant menu={this.state.menu2} />}/>
+       <Route exact path="/Varna/3" render = {() => <Restaurant menu={this.state.menu3} />}/>
+       <Route exact path="/Varna/4" render = {() => <Restaurant menu={this.state.menu1} />}/>
+       <Route exact path="/Varna/5" render = {() => <Restaurant menu={this.state.menu2} />}/>
+
+       <Route exact path="/Bourgas/1" render = {() => <Restaurant menu={this.state.menu1} />}/>
+       <Route exact path="/Bourgas/2" render = {() => <Restaurant menu={this.state.menu2} />}/>
+       <Route exact path="/Bourgas/3" render = {() => <Restaurant menu={this.state.menu3} />}/>
+       <Route exact path="/Bourgas/4" render = {() => <Restaurant menu={this.state.menu1} />}/>
+       <Route exact path="/Bourgas/5" render = {() => <Restaurant menu={this.state.menu2} />}/>
+
+       <Route exact path="/Veliko Tarnovo/1" render = {() => <Restaurant menu={this.state.menu1} />}/>
+       <Route exact path="/Veliko Tarnovo/2" render = {() => <Restaurant menu={this.state.menu2} />}/>
+       <Route exact path="/Veliko Tarnovo/3" render = {() => <Restaurant menu={this.state.menu3} />}/>
+       <Route exact path="/Veliko Tarnovo/4" render = {() => <Restaurant menu={this.state.menu1} />}/>
+       <Route exact path="/Veliko Tarnovo/5" render = {() => <Restaurant menu={this.state.menu2} />}/>
+
+       
+       <Route component={NoPage}/>
+        </Switch>
+       </BrowserRouter>
+
+        </main>
+        <footer>
+        <Footer/>
+        </footer>
+        </React.Fragment>
       </div>
 
 

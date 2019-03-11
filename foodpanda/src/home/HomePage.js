@@ -8,9 +8,7 @@ class HomePage extends Component {
     render(){
         return (
             <React.Fragment>
-            <HeroSection />
             <Cities/>
-            <DownloadApp/>
             </React.Fragment>
         );
     }

@@ -13,7 +13,7 @@ header {
 
 .top-section {
     top: 0;
-    z-index: 1200;
+    z-index: 1400;
     position: fixed;
     width: 100%;
     transition: top 200ms;   

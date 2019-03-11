@@ -1,0 +1,33 @@
+.meal-wrapper {
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    
+    border-bottom:  1px solid #ebebeb;
+   
+}
+
+.add-to-cart {
+    width: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.add-item {
+    background-color: #d70f64;
+    color: white;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+.meal { 
+    height: 70px;
+    width: 95%;
+  
+}

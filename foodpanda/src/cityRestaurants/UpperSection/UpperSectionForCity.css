@@ -45,3 +45,8 @@
     word-wrap: break-word;
     text-align: center;
 }
+.city {
+    font-size: 3em;
+    font-weight: bold;
+    font-style: oblique;
+}

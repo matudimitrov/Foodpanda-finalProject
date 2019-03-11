@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import RestaurantCard from "./RestaurantCard";
-import "./Sofia.css"
+import RestaurantCard from "../restaurantCard/RestaurantCard";
+import "../cityRestaurants.css";
+import HeroSection from "../UpperSection/UpperSectionForCity";
+import DownloadApp from "../../downloadApp/downloadApp"
 
 
 class Sofia extends Component {
@@ -16,6 +18,8 @@ class Sofia extends Component {
 
     render() {
         return (
+            <React.Fragment>
+            <HeroSection name="Sofia"/>
             <section class="restaurants">
                 <div>
                     <h1 class="h1-restaurants"> Sofia </h1>
@@ -23,10 +27,12 @@ class Sofia extends Component {
                 </div>
                 <div className="RestaurantList">
                     {this.state.Sofia.map(restaurant => (
-                        <RestaurantCard name={restaurant.name} price={restaurant.price} rating={restaurant.rating} image={restaurant.image} />
+                        <RestaurantCard id={restaurant.id} name={restaurant.name} price={restaurant.price} rating={restaurant.rating} image={restaurant.image} city="Sofia" />
                     ))}
                 </div>
             </section>
+            <DownloadApp/>
+            </React.Fragment>
         );
     }
 }
