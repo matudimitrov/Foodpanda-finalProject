@@ -8,9 +8,10 @@ import Cities from "./cities/cities";
 import LoginForm from "./home/login/loginForm";
 import RegisterForm from "./home/login/registration";
 import { networkInterfaces } from 'os';
-
-// import Sofia from "./cities/Sofia";
+import UpperSectionForCity from "./cityRestaurants/UpperSectionForCity"
+import Sofia from  "./cityRestaurants/Sofia"
 import HomePage from "./home/HomePage";
+
 
 import Restaurant from "./restaurant/restaurant"
 
@@ -84,8 +85,8 @@ class App extends Component {
 
         <main className="main">
 
-          <HeroSection />
-          <Cities/>
+          < UpperSectionForCity/>
+          <Sofia/>
           <DownloadApp />
 
 
