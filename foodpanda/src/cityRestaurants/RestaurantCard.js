@@ -12,6 +12,8 @@ class RestaurantCard extends Component {
                         </div>
                         <div className="info">
                             <span className="restaurant-name">{this.props.name}</span>
+                            <span className="restaurant-price"> Rating: {this.props.rating}</span>
+                            <span className="restaurant-rating">Prices: {this.props.price}</span>
                         </div>
                     </a>
                 </div>

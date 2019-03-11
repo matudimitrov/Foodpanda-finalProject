@@ -6,7 +6,7 @@ import "./Sofia.css"
 class Sofia extends Component {
     state = {
         Sofia: [
-            { id: 1, name: "Turkish restaurant Sarai", price: "$$", rating: 4, image: "    https://images.deliveryhero.io/image/fd-bg/LH/v7oz-listing.jpg?width=400&amp;height=292" },
+            { id: 1, name: "Turkish restaurant Sarai", price: "$$", rating: 3.6, image: "    https://images.deliveryhero.io/image/fd-bg/LH/v7oz-listing.jpg?width=400&amp;height=292" },
             { id: 2, name: "Salt & Pepper", price: "$$", rating: 4.5, image: "https://images.deliveryhero.io/image/fd-bg/LH/v4ex-listing.jpg?width=400&height=292" },
             { id: 3, name: "Starbucks", price: "$", rating: 4.3, image: "https://images.deliveryhero.io/image/fd-bg/LH/v0vl-listing.jpg?width=400&height=292" },
             { id: 4, name: "Pizza Verace", price: "$$", rating: 4.1, image: "https://images.deliveryhero.io/image/fd-bg/LH/v0zw-listing.jpg?width=400&amp;height=292" },
