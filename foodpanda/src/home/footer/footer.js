@@ -42,6 +42,7 @@ class Footer extends Component {
                     </div>
                 </div> */}
                 <div className="copyright"> <span>© 2019 Martin~Georgi foodpanda</span></div>
+                
 
 
             </div>
