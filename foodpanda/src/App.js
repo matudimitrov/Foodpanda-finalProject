@@ -7,8 +7,6 @@ import DownloadApp from "./downloadApp/downloadApp";
 import Cities from "./cities/cities";
 import LoginForm from "./home/login/loginForm";
 import RegisterForm from "./home/login/registration";
-import { networkInterfaces } from 'os';
-import UpperSectionForCity from "./cityRestaurants/UpperSection/UpperSectionForCity"
 import Sofia from  "./cityRestaurants/Sofia/Sofia"
 import Plovdiv from  "./cityRestaurants/Plovdiv/Plovdiv"
 import Bourgas from  "./cityRestaurants/Bourgas/Bourgas"
@@ -16,10 +14,7 @@ import Varna from  "./cityRestaurants/Varna/Varna"
 import VelikoTarnovo from  "./cityRestaurants/Veliko Tarnovo/VelikoTarnovo"
 import HomePage from "./home/HomePage";
 
-
-import Restaurant from "./restaurant/restaurant"
-
-// import { Route,  BrowserRouter} from "react-router-dom";
+import { Route,  BrowserRouter, Switch} from "react-router-dom";
 //import Switch from 'react-router-dom/Switch';
 
 class App extends Component {
@@ -82,32 +77,25 @@ class App extends Component {
 
 
       <div className="App">
-
+        <React.Fragment>
         <Header login={this.showLoginForm} />
 
         {this.state.form}
 
         <main className="main">
-          {/* <Sofia/> */}
-          {/* <Plovdiv/> */}
-          {/* <Bourgas/> */}
-          <VelikoTarnovo/>
-
+          <BrowserRouter>
+        <Switch>
+        <Route exact path="/" component={HomePage}/> 
+       <Route exact path="/Sofia" component ={Sofia}/>
+       <Route exact path="/Plovdiv" component ={Plovdiv}/>
+       <Route exact path="/Varna" component ={Varna}/>
+       <Route exact path="/Bourgas" component ={Bourgas}/>
+       <Route exact path="/Veliko Tarnovo" component ={VelikoTarnovo}/>
+        </Switch>
+       </BrowserRouter>
 
         </main>
-       {/* <Header />
-       <main>
-        <BrowserRouter>
-        <Switch>
-       {/* <HeroSection />
-       <Cities/>
-       <DownloadApp/> */}
-       {/* <Route exact path="/" component={HomePage}/> */}
-       {/* <Route exact path="/Sofia" component ={Sofia}/> */}
-       {/* </Switch>
-       </BrowserRouter>
-       </main> */} 
-
+        </React.Fragment>
       </div>
 
 

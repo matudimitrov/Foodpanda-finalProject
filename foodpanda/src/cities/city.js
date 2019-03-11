@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import ("./city.css")
 
 
@@ -6,7 +7,7 @@ class City extends Component {
     render() {
         return (
                 <div className="city">
-                    <a href={"/" + this.props.name}>
+                    <Link to={"/" + this.props.name}>
                         <div className="city-div" >
                         <img className="city-pic" alt="" src={require("../cities/images/" + this.props.image)}></img>
                         <span className="city-name">{this.props.name}</span>
@@ -15,7 +16,7 @@ class City extends Component {
                         {/* <span>
                             {this.props.cityLetter}
                         </span> */}
-                    </a>
+                    </Link>
                 </div>
         )
     }
