@@ -27,7 +27,7 @@ class Bourgas extends Component {
                 </div>
                 <div className="RestaurantList">
                     {this.state.Bourgas.map(restaurant => (
-                        <RestaurantCard name={restaurant.name} price={restaurant.price} rating={restaurant.rating} image={restaurant.image} />
+                        <RestaurantCard id={restaurant.id} name={restaurant.name} price={restaurant.price} rating={restaurant.rating} image={restaurant.image} city="Bourgas" />
                     ))}
                 </div>
             </section>

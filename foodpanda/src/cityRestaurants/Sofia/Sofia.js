@@ -27,7 +27,7 @@ class Sofia extends Component {
                 </div>
                 <div className="RestaurantList">
                     {this.state.Sofia.map(restaurant => (
-                        <RestaurantCard name={restaurant.name} price={restaurant.price} rating={restaurant.rating} image={restaurant.image} />
+                        <RestaurantCard id={restaurant.id} name={restaurant.name} price={restaurant.price} rating={restaurant.rating} image={restaurant.image} city="Sofia" />
                     ))}
                 </div>
             </section>

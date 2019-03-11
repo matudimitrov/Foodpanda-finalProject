@@ -27,7 +27,7 @@ class Varna extends Component {
                 </div>
                 <div className="RestaurantList">
                     {this.state.Varna.map(restaurant => (
-                        <RestaurantCard name={restaurant.name} price={restaurant.price} rating={restaurant.rating} image={restaurant.image} />
+                        <RestaurantCard id={restaurant.id} name={restaurant.name} price={restaurant.price} rating={restaurant.rating} image={restaurant.image} city="Varna" />
                     ))}
                 </div>
             </section>
