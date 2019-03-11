@@ -1,6 +1,12 @@
 .restaurant {
-    width:75%;
+    width:77%;
     height: auto;
+
+}
+
+.restaurant-image {
+    height: 290px;
+    background-image: url(https://images.deliveryhero.io/image/fd-bg/LH/v7oz-listing.jpg?width=400&amp;height=292);
 
 }
 

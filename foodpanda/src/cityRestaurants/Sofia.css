@@ -1,0 +1,31 @@
+.RestaurantList{
+    /* display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+     */
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     padding:30px;
+     margin: 30px;
+
+}
+.restaurants {
+    width: 100%;
+    height: auto;
+
+}
+.h1-restaurants {
+    font-weight: bold;
+    color: rgba(0,0,0,0.1);
+    font-size: 9em;
+    margin: 10% 0 0 10%;
+    transform: translateY(4vh)
+}
+h2 {
+    font-weight: 100;
+    position: absolute;
+    margin: 0 0 0 10%;
+    transform: translateY(-4vh)
+}

@@ -1,33 +1,31 @@
-.city{
+.restaurant{
     margin: 20px; 
     display:flex;
-    justify-content: center;
+    flex-direction: row;
     /* background: #d70f64; */
     
 }
-.city-div {
-  position: relative;
-  text-align: center;
-  color: white;
- 
+.restaurant-div {
+    /* position: relative;
+    color: white; */
+    /* display: flex; */
 }
-.city-name {
-    position: absolute;
+/* .restaurant-name {
+
     bottom: 20px;
     left: 20px;
     font-size: 2em;
-    color: white;
-    
-}
-.city-pic {
-    width:250px;
-    height:300px;
+    font-weight: bold;
+
+} */
+.restaurant-pic {
+    width:100%;
+    height:100%;
     object-fit: cover;
     opacity: 1;
     border: 2px solid lightgrey;
-    /* clip: rect(30px, 20px, 30px, 40px); */
 }
-.city-pic:hover {
+.restaurant-pic:hover {
     opacity: 0.5;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
@@ -36,9 +34,3 @@
      cursor:pointer;
     
 }
-
-/* .forward {
-    position:absolute;
-    right:0;
-    bottom:0;
-} */

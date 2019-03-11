@@ -7,7 +7,7 @@ class Cart extends Component {
         return (
             <aside className="cart-wrapper">
                 <div className="cart-content">
-                    
+                    <h3 className="cart-header">Your order from {this.props.restName}</h3>    
                    </div>
             </aside>
 
