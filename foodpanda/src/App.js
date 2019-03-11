@@ -14,6 +14,7 @@ import Varna from  "./cityRestaurants/Varna/Varna";
 import VelikoTarnovo from  "./cityRestaurants/Veliko Tarnovo/VelikoTarnovo";
 import HomePage from "./home/HomePage";
 import NoPage from "./home/NoPage";
+import Footer from "./home/footer/footer"
 
 import { Route,  BrowserRouter, Switch} from "react-router-dom";
 //import Switch from 'react-router-dom/Switch';
@@ -97,6 +98,9 @@ class App extends Component {
        </BrowserRouter>
 
         </main>
+        <footer>
+        <Footer/>
+        </footer>
         </React.Fragment>
       </div>
 

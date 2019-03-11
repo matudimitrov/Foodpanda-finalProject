@@ -1,0 +1,29 @@
+.h1{ 
+    font-weight: bold;
+}
+.container{
+    margin: 100px 100px;
+}
+
+ul{
+    list-style-type: none;
+  }
+
+.paragraph{
+    color: black;
+    font-size:1em;
+    text-align: left;
+    margin-left:30px;
+    max-width: 70%;
+
+}
+.link{
+    display: flex;
+    flex-direction: row;
+}
+.copyright{
+    margin-top:20px;
+    text-align: right;
+    bottom:0;
+    right:0;
+}
