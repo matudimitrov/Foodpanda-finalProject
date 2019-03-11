@@ -1,0 +1,8 @@
+.cart-wrapper {background-color: #fff;
+    flex: 0 0 0;
+    position: relative;
+    z-index: 1299;
+    box-shadow: 0 2px 28px 0 rgba(0,0,0,0);
+    background-color: 0 2px 28px 0 rgba(0,0,0,0);
+    
+}
